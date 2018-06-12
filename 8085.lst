@@ -1,0 +1,1240 @@
+				;
+				;	Disassembled by:
+				;		DASMx object code disassembler
+				;		(c) Copyright 1996-2003   Conquest Consultants
+				;		Version 1.40 (Oct 18 2003)
+				;
+				;	File:		8085.bin
+				;
+				;	Size:		2048 bytes
+				;	Checksum:	AEF6
+				;	CRC-32:		376D3836
+				;
+				;	Date:		Sun May 27 19:40:48 2018
+				;
+				;	CPU:		Intel 8080 (MCS-80/85 family)
+				;
+				;
+				;
+					org	00000H
+				;
+0000 : C3 3F 00		" ? "		jmp	L003F
+				;
+0003 : 00		" "		nop
+0004 : 3E 00		"> "		mvi	a,000H
+0006 : 3E 00		"> "		mvi	a,000H
+0008 : 3E 00		"> "		mvi	a,000H
+000A : 3E 00		"> "		mvi	a,000H
+000C : 3E 00		"> "		mvi	a,000H
+000E : 3E 00		"> "		mvi	a,000H
+0010 : 3E 00		"> "		mvi	a,000H
+0012 : 3E 00		"> "		mvi	a,000H
+0014 : 3E 00		"> "		mvi	a,000H
+0016 : 3E 00		"> "		mvi	a,000H
+0018 : 3E 00		"> "		mvi	a,000H
+001A : 3E 00		"> "		mvi	a,000H
+001C : 3E 00		"> "		mvi	a,000H
+001E : 3E 00		"> "		mvi	a,000H
+0020 : 3E 00		"> "		mvi	a,000H
+0022 : 3E 00		"> "		mvi	a,000H
+0024 : 3E 00		"> "		mvi	a,000H
+0026 : 3E 00		"> "		mvi	a,000H
+0028 : 3E 00		"> "		mvi	a,000H
+002A : 3E 00		"> "		mvi	a,000H
+002C : 3E 00		"> "		mvi	a,000H
+002E : 3E 00		"> "		mvi	a,000H
+0030 : 3E 00		"> "		mvi	a,000H
+0032 : 3E 00		"> "		mvi	a,000H
+0034 : 3E 00		"> "		mvi	a,000H
+0036 : 3E 00		"> "		mvi	a,000H
+0038 : 3E 00		"> "		mvi	a,000H
+003A : 3E 00		"> "		mvi	a,000H
+003C : C3 D9 00		"   "		jmp	L00D9
+				;
+003F				L003F:
+003F : 3E 91		"> "		mvi	a,091H
+0041 : D3 03		"  "		out	003H
+0043 : 3E CF		"> "		mvi	a,0CFH
+0045 : D3 05		"  "		out	005H
+0047 : 3E 0E		"> "		mvi	a,00EH
+0049 : D3 05		"  "		out	005H
+004B				L004B:
+004B : 3E 10		"> "		mvi	a,010H
+004D : D3 02		"  "		out	002H
+004F : AF		" "		xra	a
+0050 : D3 01		"  "		out	001H
+0052 : 32 08 83		"2  "		sta	X8308
+0055 : 32 09 83		"2  "		sta	X8309
+0058 : 31 E0 83		"1  "		lxi	sp,083E0H
+005B : 21 00 80		"!  "		lxi	h,08000H
+005E : 3E 0B		"> "		mvi	a,00BH
+				;
+0060 : 30		"0"		db	030H
+				;
+0061 : FB		" "		ei
+0062 : AF		" "		xra	a
+0063 : 32 09 83		"2  "		sta	X8309
+0066				L0066:
+0066 : 3E 0F		"> "		mvi	a,00FH
+0068 : 32 0A 83		"2  "		sta	X830A
+006B				L006B:
+006B : CD E1 00		"   "		call	L00E1
+006E : 3A 0C 83		":  "		lda	X830C
+0071 : FE 0D		"  "		cpi	00DH
+0073 : CA 82 00		"   "		jz	L0082
+0076 : CD 7C 02		" | "		call	L027C
+0079 : FE 60		" `"		cpi	060H
+007B : C2 66 00		" f "		jnz	L0066
+007E : 76		"v"		hlt
+007F : C3 6B 00		" k "		jmp	L006B
+				;
+0082				L0082:
+0082 : 3E 0F		"> "		mvi	a,00FH
+0084 : 32 0A 83		"2  "		sta	X830A
+0087 : CD E1 00		"   "		call	L00E1
+008A : CD 7C 02		" | "		call	L027C
+008D : 3A 0B 83		":  "		lda	X830B
+0090 : 3C		"<"		inr	a
+0091 : 32 0B 83		"2  "		sta	X830B
+0094 : FE 08		"  "		cpi	008H
+0096 : C2 AD 00		"   "		jnz	L00AD
+0099				L0099:
+0099 : 3A 08 83		":  "		lda	X8308
+009C : 1F		" "		rar
+009D : DC E1 00		"   "		cc	L00E1
+00A0 : DB 05		"  "		in	005H
+00A2 : 1F		" "		rar
+00A3 : 1F		" "		rar
+00A4 : D2 99 00		"   "		jnc	L0099
+00A7 : DB 04		"  "		in	004H
+00A9 : AF		" "		xra	a
+00AA : 32 0B 83		"2  "		sta	X830B
+00AD				L00AD:
+00AD : 3A 09 83		":  "		lda	X8309
+00B0 : FE 60		" `"		cpi	060H
+00B2 : C2 82 00		"   "		jnz	L0082
+00B5 : 3E 0E		"> "		mvi	a,00EH
+00B7 : 32 0A 83		"2  "		sta	X830A
+00BA : CD E1 00		"   "		call	L00E1
+00BD : 3E 30		">0"		mvi	a,030H
+00BF : 32 19 83		"2  "		sta	X8319
+00C2 : CD 7C 02		" | "		call	L027C
+00C5 : 3E 0E		"> "		mvi	a,00EH
+00C7 : 32 0A 83		"2  "		sta	X830A
+00CA : CD E1 00		"   "		call	L00E1
+00CD : 3E 30		">0"		mvi	a,030H
+00CF : 32 19 83		"2  "		sta	X8319
+00D2 : CD 7C 02		" | "		call	L027C
+00D5 : 76		"v"		hlt
+00D6 : C3 6B 00		" k "		jmp	L006B
+				;
+00D9				L00D9:
+00D9 : F5		" "		push	psw
+00DA : 3E 01		"> "		mvi	a,001H
+00DC : 32 08 83		"2  "		sta	X8308
+00DF : F1		" "		pop	psw
+00E0 : C9		" "		ret
+				;
+00E1				L00E1:
+00E1 : E5		" "		push	h
+00E2 : C5		" "		push	b
+00E3 : D5		" "		push	d
+00E4 : 01 0C 83		"   "		lxi	b,X830C
+00E7				L00E7:
+00E7 : 3A 08 83		":  "		lda	X8308
+00EA : 1F		" "		rar
+00EB : DA 07 01		"   "		jc	L0107
+00EE : DB 05		"  "		in	005H
+00F0 : 1F		" "		rar
+00F1 : 1F		" "		rar
+00F2 : D2 E7 00		"   "		jnc	L00E7
+00F5 : DB 04		"  "		in	004H
+00F7 : 02		" "		stax	b
+00F8 : 03		" "		inx	b
+00F9 : AF		" "		xra	a
+00FA : 3A 0A 83		":  "		lda	X830A
+00FD : 3D		"="		dcr	a
+00FE : 32 0A 83		"2  "		sta	X830A
+0101 : C2 E7 00		"   "		jnz	L00E7
+0104 : C3 D4 01		"   "		jmp	L01D4
+				;
+0107				L0107:
+0107 : 3A 09 83		":  "		lda	X8309
+010A : 57		"W"		mov	d,a
+010B : AF		" "		xra	a
+010C : BA		" "		cmp	d
+010D : C2 9F 01		"   "		jnz	L019F
+				;
+0110 : 20		" "		db	020H
+				;
+0111 : 17		" "		ral
+0112 : DA 98 01		"   "		jc	L0198
+0115 : DB 00		"  "		in	000H
+0117 : 47		"G"		mov	b,a
+0118 : DB 02		"  "		in	002H
+011A : 4F		"O"		mov	c,a
+011B				L011B:
+011B : DB 00		"  "		in	000H
+011D : B8		" "		cmp	b
+011E : C2 8D 01		"   "		jnz	L018D
+0121 : 32 00 83		"2  "		sta	X8300
+0124 : DB 02		"  "		in	002H
+0126 : B9		" "		cmp	c
+0127 : C2 94 01		"   "		jnz	L0194
+012A : E6 0F		"  "		ani	00FH
+012C : 32 01 83		"2  "		sta	X8301
+012F : AF		" "		xra	a
+0130 : 3A 01 83		":  "		lda	X8301
+0133 : 1F		" "		rar
+0134 : 1F		" "		rar
+0135 : 1F		" "		rar
+0136 : DA 3C 01		" < "		jc	L013C
+0139 : C3 41 01		" A "		jmp	L0141
+				;
+013C				L013C:
+013C : 3E 0D		"> "		mvi	a,00DH
+013E : C3 43 01		" C "		jmp	L0143
+				;
+0141				L0141:
+0141 : 3E 0C		"> "		mvi	a,00CH
+0143				L0143:
+0143 : C6 60		" `"		adi	060H
+0145 : 32 02 83		"2  "		sta	X8302
+0148 : AF		" "		xra	a
+0149 : 06 07		"  "		mvi	b,007H
+014B : 3A 01 83		":  "		lda	X8301
+014E : 4F		"O"		mov	c,a
+014F : 0A		" "		ldax	b
+0150 : 32 03 83		"2  "		sta	X8303
+0153 : AF		" "		xra	a
+0154 : 3A 02 83		":  "		lda	X8302
+0157 : 21 03 83		"!  "		lxi	h,X8303
+015A : 5E		"^"		mov	e,m
+015B : 8B		" "		adc	e
+015C : 21 00 83		"!  "		lxi	h,X8300
+015F : 5E		"^"		mov	e,m
+0160 : 8B		" "		adc	e
+0161 : DA 67 01		" g "		jc	L0167
+0164 : C3 68 01		" h "		jmp	L0168
+				;
+0167				L0167:
+0167 : 3C		"<"		inr	a
+0168				L0168:
+0168 : 32 04 83		"2  "		sta	X8304
+016B : CD 18 02		"   "		call	L0218
+016E : AF		" "		xra	a
+016F : 3A 04 83		":  "		lda	X8304
+0172 : CD D8 01		"   "		call	L01D8
+0175 : 3A 02 83		":  "		lda	X8302
+0178 : CD D8 01		"   "		call	L01D8
+017B : 3A 03 83		":  "		lda	X8303
+017E : CD D8 01		"   "		call	L01D8
+0181 : 3A 00 83		":  "		lda	X8300
+0184 : CD D8 01		"   "		call	L01D8
+0187 : CD 4B 02		" K "		call	L024B
+018A : C3 98 01		"   "		jmp	L0198
+				;
+018D				L018D:
+018D : 47		"G"		mov	b,a
+018E : DB 02		"  "		in	002H
+0190 : 4F		"O"		mov	c,a
+0191 : C3 1B 01		"   "		jmp	L011B
+				;
+0194				L0194:
+0194 : 4F		"O"		mov	c,a
+0195 : C3 1B 01		"   "		jmp	L011B
+				;
+0198				L0198:
+0198 : D1		" "		pop	d
+0199 : C1		" "		pop	b
+019A : E1		" "		pop	h
+019B : D1		" "		pop	d
+019C : C3 4B 00		" K "		jmp	L004B
+				;
+019F				L019F:
+019F : 21 00 80		"!  "		lxi	h,08000H
+01A2 : 3E 01		"> "		mvi	a,001H
+01A4 : D3 01		"  "		out	001H
+01A6				L01A6:
+01A6 : CD 18 02		"   "		call	L0218
+01A9 : AF		" "		xra	a
+01AA : 7E		"~"		mov	a,m
+01AB : CD D8 01		"   "		call	L01D8
+01AE : 23		"#"		inx	h
+01AF : 7E		"~"		mov	a,m
+01B0 : CD D8 01		"   "		call	L01D8
+01B3 : 23		"#"		inx	h
+01B4 : 7E		"~"		mov	a,m
+01B5 : CD D8 01		"   "		call	L01D8
+01B8 : 23		"#"		inx	h
+01B9 : 7E		"~"		mov	a,m
+01BA : CD D8 01		"   "		call	L01D8
+01BD : 23		"#"		inx	h
+01BE : 7E		"~"		mov	a,m
+01BF : CD D8 01		"   "		call	L01D8
+01C2 : 23		"#"		inx	h
+01C3 : CD 4B 02		" K "		call	L024B
+01C6 : AF		" "		xra	a
+01C7 : 3A 09 83		":  "		lda	X8309
+01CA : 3D		"="		dcr	a
+01CB : 32 09 83		"2  "		sta	X8309
+01CE : CA 98 01		"   "		jz	L0198
+01D1 : C3 A6 01		"   "		jmp	L01A6
+				;
+01D4				L01D4:
+01D4 : D1		" "		pop	d
+01D5 : C1		" "		pop	b
+01D6 : E1		" "		pop	h
+01D7 : C9		" "		ret
+				;
+01D8				L01D8:
+01D8 : C5		" "		push	b
+01D9 : 06 08		"  "		mvi	b,008H
+01DB				L01DB:
+01DB : 07		" "		rlc
+01DC : 4F		"O"		mov	c,a
+01DD : 3E 10		"> "		mvi	a,010H
+01DF : D3 02		"  "		out	002H
+01E1 : DA F8 01		"   "		jc	L01F8
+01E4 : CD 04 02		"   "		call	L0204
+01E7				L01E7:
+01E7 : AF		" "		xra	a
+01E8 : D3 02		"  "		out	002H
+01EA : CD 04 02		"   "		call	L0204
+01ED : AF		" "		xra	a
+01EE : 78		"x"		mov	a,b
+01EF : 3D		"="		dcr	a
+01F0 : CA 01 02		"   "		jz	L0201
+01F3 : 47		"G"		mov	b,a
+01F4 : 79		"y"		mov	a,c
+01F5 : C3 DB 01		"   "		jmp	L01DB
+				;
+01F8				L01F8:
+01F8 : CD 04 02		"   "		call	L0204
+01FB : CD 04 02		"   "		call	L0204
+01FE : C3 E7 01		"   "		jmp	L01E7
+				;
+0201				L0201:
+0201 : AF		" "		xra	a
+0202 : C1		" "		pop	b
+0203 : C9		" "		ret
+				;
+0204				L0204:
+0204 : 3E 01		"> "		mvi	a,001H
+0206				L0206:
+0206 : 32 05 83		"2  "		sta	X8305
+0209 : AF		" "		xra	a
+020A : 3E E0		"> "		mvi	a,0E0H
+020C				L020C:
+020C : 3C		"<"		inr	a
+020D : C2 0C 02		"   "		jnz	L020C
+0210 : 3A 05 83		":  "		lda	X8305
+0213 : 3D		"="		dcr	a
+0214 : C2 06 02		"   "		jnz	L0206
+0217 : C9		" "		ret
+				;
+0218				L0218:
+0218 : AF		" "		xra	a
+0219 : D3 02		"  "		out	002H
+021B : 32 06 83		"2  "		sta	X8306
+021E				L021E:
+021E : CD 04 02		"   "		call	L0204
+0221 : 3A 06 83		":  "		lda	X8306
+0224 : 3C		"<"		inr	a
+0225 : 32 06 83		"2  "		sta	X8306
+0228 : FE FF		"  "		cpi	0FFH
+022A : CA 30 02		" 0 "		jz	L0230
+022D : C3 1E 02		"   "		jmp	L021E
+				;
+0230				L0230:
+0230 : 3E 10		"> "		mvi	a,010H
+0232 : D3 02		"  "		out	002H
+0234 : CD 04 02		"   "		call	L0204
+0237 : AF		" "		xra	a
+0238 : D3 02		"  "		out	002H
+023A : CD 04 02		"   "		call	L0204
+023D : 3E 10		"> "		mvi	a,010H
+023F : D3 02		"  "		out	002H
+0241 : CD 04 02		"   "		call	L0204
+0244 : AF		" "		xra	a
+0245 : D3 02		"  "		out	002H
+0247 : CD 04 02		"   "		call	L0204
+024A : C9		" "		ret
+				;
+024B				L024B:
+024B : 3E 10		"> "		mvi	a,010H
+024D : D3 02		"  "		out	002H
+024F : CD 04 02		"   "		call	L0204
+0252 : CD 04 02		"   "		call	L0204
+0255 : AF		" "		xra	a
+0256 : D3 02		"  "		out	002H
+0258 : CD 04 02		"   "		call	L0204
+025B : 3E 10		"> "		mvi	a,010H
+025D : D3 02		"  "		out	002H
+025F : CD 04 02		"   "		call	L0204
+0262 : AF		" "		xra	a
+0263 : D3 02		"  "		out	002H
+0265 : CD 04 02		"   "		call	L0204
+0268 : 3E 90		"> "		mvi	a,090H
+026A				L026A:
+026A : 32 07 83		"2  "		sta	X8307
+026D : AF		" "		xra	a
+026E : 3E 01		"> "		mvi	a,001H
+0270				L0270:
+0270 : 3C		"<"		inr	a
+0271 : C2 70 02		" p "		jnz	L0270
+0274 : 3A 07 83		":  "		lda	X8307
+0277 : 3D		"="		dcr	a
+0278 : C2 6A 02		" j "		jnz	L026A
+027B : C9		" "		ret
+				;
+027C				L027C:
+027C : C5		" "		push	b
+027D : D5		" "		push	d
+027E : 3A 14 83		":  "		lda	X8314
+0281 : FE 2D		" -"		cpi	02DH
+0283 : CA 8B 02		"   "		jz	L028B
+0286 : 3E 6C		">l"		mvi	a,06CH
+0288 : C3 8D 02		"   "		jmp	L028D
+				;
+028B				L028B:
+028B : 3E 6D		">m"		mvi	a,06DH
+028D				L028D:
+028D : 32 1B 83		"2  "		sta	X831B
+0290 : 3A 15 83		":  "		lda	X8315
+0293 : FE 42		" B"		cpi	042H
+0295 : CA D3 02		"   "		jz	L02D3
+0298 : FE 55		" U"		cpi	055H
+029A : CA D3 02		"   "		jz	L02D3
+029D : 3A 16 83		":  "		lda	X8316
+02A0 : FE 4F		" O"		cpi	04FH
+02A2 : CA E4 02		"   "		jz	L02E4
+02A5 : 3A 15 83		":  "		lda	X8315
+02A8 : C6 80		"  "		adi	080H
+02AA : 07		" "		rlc
+02AB : 07		" "		rlc
+02AC : 07		" "		rlc
+02AD : 07		" "		rlc
+02AE : 32 1C 83		"2  "		sta	X831C
+02B1 : 3A 17 83		":  "		lda	X8317
+02B4 : C6 D0		"  "		adi	0D0H
+02B6 : 07		" "		rlc
+02B7 : 07		" "		rlc
+02B8 : 07		" "		rlc
+02B9 : 07		" "		rlc
+02BA : 4F		"O"		mov	c,a
+02BB : 3A 18 83		":  "		lda	X8318
+02BE : C6 D0		"  "		adi	0D0H
+02C0 : 81		" "		add	c
+02C1 : 32 1D 83		"2  "		sta	X831D
+02C4 : 3A 19 83		":  "		lda	X8319
+02C7 : C6 70		" p"		adi	070H
+02C9 : 07		" "		rlc
+02CA : 07		" "		rlc
+02CB : 07		" "		rlc
+02CC : 07		" "		rlc
+02CD : 32 1E 83		"2  "		sta	X831E
+02D0 : C3 F6 02		"   "		jmp	L02F6
+				;
+02D3				L02D3:
+02D3 : 3E 0B		"> "		mvi	a,00BH
+02D5 : 32 1C 83		"2  "		sta	X831C
+02D8 : AF		" "		xra	a
+02D9 : 32 1D 83		"2  "		sta	X831D
+02DC : 3E 0A		"> "		mvi	a,00AH
+02DE : 32 1E 83		"2  "		sta	X831E
+02E1 : C3 F6 02		"   "		jmp	L02F6
+				;
+02E4				L02E4:
+02E4 : 3E 1B		"> "		mvi	a,01BH
+02E6 : 32 1C 83		"2  "		sta	X831C
+02E9 : 3E 50		">P"		mvi	a,050H
+02EB : 32 1D 83		"2  "		sta	X831D
+02EE : 3E 0A		"> "		mvi	a,00AH
+02F0 : 32 1E 83		"2  "		sta	X831E
+02F3 : C3 F6 02		"   "		jmp	L02F6
+				;
+02F6				L02F6:
+02F6 : AF		" "		xra	a
+02F7 : 3A 1B 83		":  "		lda	X831B
+02FA : 5F		"_"		mov	e,a
+02FB : 3A 1C 83		":  "		lda	X831C
+02FE : 8B		" "		adc	e
+02FF : 5F		"_"		mov	e,a
+0300 : 3A 1D 83		":  "		lda	X831D
+0303 : 8B		" "		adc	e
+0304 : 5F		"_"		mov	e,a
+0305 : 3A 1E 83		":  "		lda	X831E
+0308 : 8B		" "		adc	e
+0309 : DA 0F 03		"   "		jc	L030F
+030C : C3 10 03		"   "		jmp	L0310
+				;
+030F				L030F:
+030F : 3C		"<"		inr	a
+0310				L0310:
+0310 : 77		"w"		mov	m,a
+0311 : 23		"#"		inx	h
+0312 : 3A 1B 83		":  "		lda	X831B
+0315 : 77		"w"		mov	m,a
+0316 : 23		"#"		inx	h
+0317 : 3A 1C 83		":  "		lda	X831C
+031A : 77		"w"		mov	m,a
+031B : 23		"#"		inx	h
+031C : 3A 1D 83		":  "		lda	X831D
+031F : 77		"w"		mov	m,a
+0320 : 23		"#"		inx	h
+0321 : 3A 1E 83		":  "		lda	X831E
+0324 : 77		"w"		mov	m,a
+0325 : 23		"#"		inx	h
+0326 : 3A 09 83		":  "		lda	X8309
+0329 : 3C		"<"		inr	a
+032A : 32 09 83		"2  "		sta	X8309
+032D : D1		" "		pop	d
+032E : C1		" "		pop	b
+032F : C9		" "		ret
+				;
+0330 : 3E 00		"> "		mvi	a,000H
+0332 : 3E 00		"> "		mvi	a,000H
+0334 : 3E 00		"> "		mvi	a,000H
+0336 : 3E 00		"> "		mvi	a,000H
+0338 : 3E 00		"> "		mvi	a,000H
+033A : 3E 00		"> "		mvi	a,000H
+033C : 3E 00		"> "		mvi	a,000H
+033E : 3E 00		"> "		mvi	a,000H
+0340 : 3E 00		"> "		mvi	a,000H
+0342 : 3E 00		"> "		mvi	a,000H
+0344 : 3E 00		"> "		mvi	a,000H
+0346 : 3E 00		"> "		mvi	a,000H
+0348 : 3E 00		"> "		mvi	a,000H
+034A : 3E 00		"> "		mvi	a,000H
+034C : 3E 00		"> "		mvi	a,000H
+034E : 3E 00		"> "		mvi	a,000H
+0350 : 3E 00		"> "		mvi	a,000H
+0352 : 3E 00		"> "		mvi	a,000H
+0354 : 3E 00		"> "		mvi	a,000H
+0356 : 3E 00		"> "		mvi	a,000H
+0358 : 3E 00		"> "		mvi	a,000H
+035A : 3E 00		"> "		mvi	a,000H
+035C : 3E 00		"> "		mvi	a,000H
+035E : 3E 00		"> "		mvi	a,000H
+0360 : 3E 00		"> "		mvi	a,000H
+0362 : 3E 00		"> "		mvi	a,000H
+0364 : 3E 00		"> "		mvi	a,000H
+0366 : 3E 00		"> "		mvi	a,000H
+0368 : 3E 00		"> "		mvi	a,000H
+036A : 3E 00		"> "		mvi	a,000H
+036C : 3E 00		"> "		mvi	a,000H
+036E : 3E 00		"> "		mvi	a,000H
+0370 : 3E 00		"> "		mvi	a,000H
+0372 : 3E 00		"> "		mvi	a,000H
+0374 : 3E 00		"> "		mvi	a,000H
+0376 : 3E 00		"> "		mvi	a,000H
+0378 : 3E 00		"> "		mvi	a,000H
+037A : 3E 00		"> "		mvi	a,000H
+037C : 3E 00		"> "		mvi	a,000H
+037E : 3E 00		"> "		mvi	a,000H
+0380 : 3E 00		"> "		mvi	a,000H
+0382 : 3E 00		"> "		mvi	a,000H
+0384 : 3E 00		"> "		mvi	a,000H
+0386 : 3E 00		"> "		mvi	a,000H
+0388 : 3E 00		"> "		mvi	a,000H
+038A : 3E 00		"> "		mvi	a,000H
+038C : 3E 00		"> "		mvi	a,000H
+038E : 3E 00		"> "		mvi	a,000H
+0390 : 3E 00		"> "		mvi	a,000H
+0392 : 3E 00		"> "		mvi	a,000H
+0394 : 3E 00		"> "		mvi	a,000H
+0396 : 3E 00		"> "		mvi	a,000H
+0398 : 3E 00		"> "		mvi	a,000H
+039A : 3E 00		"> "		mvi	a,000H
+039C : 3E 00		"> "		mvi	a,000H
+039E : 3E 00		"> "		mvi	a,000H
+03A0 : 3E 00		"> "		mvi	a,000H
+03A2 : 3E 00		"> "		mvi	a,000H
+03A4 : 3E 00		"> "		mvi	a,000H
+03A6 : 3E 00		"> "		mvi	a,000H
+03A8 : 3E 00		"> "		mvi	a,000H
+03AA : 3E 00		"> "		mvi	a,000H
+03AC : 3E 00		"> "		mvi	a,000H
+03AE : 3E 00		"> "		mvi	a,000H
+03B0 : 3E 00		"> "		mvi	a,000H
+03B2 : 3E 00		"> "		mvi	a,000H
+03B4 : 3E 00		"> "		mvi	a,000H
+03B6 : 3E 00		"> "		mvi	a,000H
+03B8 : 3E 00		"> "		mvi	a,000H
+03BA : 3E 00		"> "		mvi	a,000H
+03BC : 3E 00		"> "		mvi	a,000H
+03BE : 3E 00		"> "		mvi	a,000H
+03C0 : 3E 00		"> "		mvi	a,000H
+03C2 : 3E 00		"> "		mvi	a,000H
+03C4 : 3E 00		"> "		mvi	a,000H
+03C6 : 3E 00		"> "		mvi	a,000H
+03C8 : 3E 00		"> "		mvi	a,000H
+03CA : 3E 00		"> "		mvi	a,000H
+03CC : 3E 00		"> "		mvi	a,000H
+03CE : 3E 00		"> "		mvi	a,000H
+03D0 : 3E 00		"> "		mvi	a,000H
+03D2 : 3E 00		"> "		mvi	a,000H
+03D4 : 3E 00		"> "		mvi	a,000H
+03D6 : 3E 00		"> "		mvi	a,000H
+03D8 : 3E 00		"> "		mvi	a,000H
+03DA : 3E 00		"> "		mvi	a,000H
+03DC : 3E 00		"> "		mvi	a,000H
+03DE : 3E 00		"> "		mvi	a,000H
+03E0 : 3E 00		"> "		mvi	a,000H
+03E2 : 3E 00		"> "		mvi	a,000H
+03E4 : 3E 00		"> "		mvi	a,000H
+03E6 : 3E 00		"> "		mvi	a,000H
+03E8 : 3E 00		"> "		mvi	a,000H
+03EA : 3E 00		"> "		mvi	a,000H
+03EC : 3E 00		"> "		mvi	a,000H
+03EE : 3E 00		"> "		mvi	a,000H
+03F0 : 3E 00		"> "		mvi	a,000H
+03F2 : 3E 00		"> "		mvi	a,000H
+03F4 : 3E 00		"> "		mvi	a,000H
+03F6 : 3E 00		"> "		mvi	a,000H
+03F8 : 3E 00		"> "		mvi	a,000H
+03FA : 3E 00		"> "		mvi	a,000H
+03FC : 3E 00		"> "		mvi	a,000H
+03FE : 3E 00		"> "		mvi	a,000H
+0400 : 3E 00		"> "		mvi	a,000H
+0402 : 3E 00		"> "		mvi	a,000H
+0404 : 3E 00		"> "		mvi	a,000H
+0406 : 3E 00		"> "		mvi	a,000H
+0408 : 3E 00		"> "		mvi	a,000H
+040A : 3E 00		"> "		mvi	a,000H
+040C : 3E 00		"> "		mvi	a,000H
+040E : 3E 00		"> "		mvi	a,000H
+0410 : 3E 00		"> "		mvi	a,000H
+0412 : 3E 00		"> "		mvi	a,000H
+0414 : 3E 00		"> "		mvi	a,000H
+0416 : 3E 00		"> "		mvi	a,000H
+0418 : 3E 00		"> "		mvi	a,000H
+041A : 3E 00		"> "		mvi	a,000H
+041C : 3E 00		"> "		mvi	a,000H
+041E : 3E 00		"> "		mvi	a,000H
+0420 : 3E 00		"> "		mvi	a,000H
+0422 : 3E 00		"> "		mvi	a,000H
+0424 : 3E 00		"> "		mvi	a,000H
+0426 : 3E 00		"> "		mvi	a,000H
+0428 : 3E 00		"> "		mvi	a,000H
+042A : 3E 00		"> "		mvi	a,000H
+042C : 3E 00		"> "		mvi	a,000H
+042E : 3E 00		"> "		mvi	a,000H
+0430 : 3E 00		"> "		mvi	a,000H
+0432 : 3E 00		"> "		mvi	a,000H
+0434 : 3E 00		"> "		mvi	a,000H
+0436 : 3E 00		"> "		mvi	a,000H
+0438 : 3E 00		"> "		mvi	a,000H
+043A : 3E 00		"> "		mvi	a,000H
+043C : 3E 00		"> "		mvi	a,000H
+043E : 3E 00		"> "		mvi	a,000H
+0440 : 3E 00		"> "		mvi	a,000H
+0442 : 3E 00		"> "		mvi	a,000H
+0444 : 3E 00		"> "		mvi	a,000H
+0446 : 3E 00		"> "		mvi	a,000H
+0448 : 3E 00		"> "		mvi	a,000H
+044A : 3E 00		"> "		mvi	a,000H
+044C : 3E 00		"> "		mvi	a,000H
+044E : 3E 00		"> "		mvi	a,000H
+0450 : 3E 00		"> "		mvi	a,000H
+0452 : 3E 00		"> "		mvi	a,000H
+0454 : 3E 00		"> "		mvi	a,000H
+0456 : 3E 00		"> "		mvi	a,000H
+0458 : 3E 00		"> "		mvi	a,000H
+045A : 3E 00		"> "		mvi	a,000H
+045C : 3E 00		"> "		mvi	a,000H
+045E : 3E 00		"> "		mvi	a,000H
+0460 : 3E 00		"> "		mvi	a,000H
+0462 : 3E 00		"> "		mvi	a,000H
+0464 : 3E 00		"> "		mvi	a,000H
+0466 : 3E 00		"> "		mvi	a,000H
+0468 : 3E 00		"> "		mvi	a,000H
+046A : 3E 00		"> "		mvi	a,000H
+046C : 3E 00		"> "		mvi	a,000H
+046E : 3E 00		"> "		mvi	a,000H
+0470 : 3E 00		"> "		mvi	a,000H
+0472 : 3E 00		"> "		mvi	a,000H
+0474 : 3E 00		"> "		mvi	a,000H
+0476 : 3E 00		"> "		mvi	a,000H
+0478 : 3E 00		"> "		mvi	a,000H
+047A : 3E 00		"> "		mvi	a,000H
+047C : 3E 00		"> "		mvi	a,000H
+047E : 3E 00		"> "		mvi	a,000H
+0480 : 3E 00		"> "		mvi	a,000H
+0482 : 3E 00		"> "		mvi	a,000H
+0484 : 3E 00		"> "		mvi	a,000H
+0486 : 3E 00		"> "		mvi	a,000H
+0488 : 3E 00		"> "		mvi	a,000H
+048A : 3E 00		"> "		mvi	a,000H
+048C : 3E 00		"> "		mvi	a,000H
+048E : 3E 00		"> "		mvi	a,000H
+0490 : 3E 00		"> "		mvi	a,000H
+0492 : 3E 00		"> "		mvi	a,000H
+0494 : 3E 00		"> "		mvi	a,000H
+0496 : 3E 00		"> "		mvi	a,000H
+0498 : 3E 00		"> "		mvi	a,000H
+049A : 3E 00		"> "		mvi	a,000H
+049C : 3E 00		"> "		mvi	a,000H
+049E : 3E 00		"> "		mvi	a,000H
+04A0 : 3E 00		"> "		mvi	a,000H
+04A2 : 3E 00		"> "		mvi	a,000H
+04A4 : 3E 00		"> "		mvi	a,000H
+04A6 : 3E 00		"> "		mvi	a,000H
+04A8 : 3E 00		"> "		mvi	a,000H
+04AA : 3E 00		"> "		mvi	a,000H
+04AC : 3E 00		"> "		mvi	a,000H
+04AE : 3E 00		"> "		mvi	a,000H
+04B0 : 3E 00		"> "		mvi	a,000H
+04B2 : 3E 00		"> "		mvi	a,000H
+04B4 : 3E 00		"> "		mvi	a,000H
+04B6 : 3E 00		"> "		mvi	a,000H
+04B8 : 3E 00		"> "		mvi	a,000H
+04BA : 3E 00		"> "		mvi	a,000H
+04BC : 3E 00		"> "		mvi	a,000H
+04BE : 3E 00		"> "		mvi	a,000H
+04C0 : 3E 00		"> "		mvi	a,000H
+04C2 : 3E 00		"> "		mvi	a,000H
+04C4 : 3E 00		"> "		mvi	a,000H
+04C6 : 3E 00		"> "		mvi	a,000H
+04C8 : 3E 00		"> "		mvi	a,000H
+04CA : 3E 00		"> "		mvi	a,000H
+04CC : 3E 00		"> "		mvi	a,000H
+04CE : 3E 00		"> "		mvi	a,000H
+04D0 : 36 00		"6 "		mvi	m,000H
+04D2 : 3E 00		"> "		mvi	a,000H
+04D4 : 3E 00		"> "		mvi	a,000H
+04D6 : 3E 00		"> "		mvi	a,000H
+04D8 : 3E 00		"> "		mvi	a,000H
+04DA : 3E 00		"> "		mvi	a,000H
+04DC : 3E 00		"> "		mvi	a,000H
+04DE : 3E 00		"> "		mvi	a,000H
+04E0 : 3E 00		"> "		mvi	a,000H
+04E2 : 3E 00		"> "		mvi	a,000H
+04E4 : 3E 00		"> "		mvi	a,000H
+04E6 : 3E 00		"> "		mvi	a,000H
+04E8 : 3E 00		"> "		mvi	a,000H
+04EA : 3E 00		"> "		mvi	a,000H
+04EC : 3E 00		"> "		mvi	a,000H
+04EE : 3E 00		"> "		mvi	a,000H
+04F0 : 3E 00		"> "		mvi	a,000H
+04F2 : 3E 00		"> "		mvi	a,000H
+04F4 : 3E 00		"> "		mvi	a,000H
+04F6 : 3E 00		"> "		mvi	a,000H
+04F8 : 3E 00		"> "		mvi	a,000H
+04FA : 3E 00		"> "		mvi	a,000H
+04FC : 3E 00		"> "		mvi	a,000H
+04FE : 3E 00		"> "		mvi	a,000H
+0500 : 3E 00		"> "		mvi	a,000H
+0502 : 3E 00		"> "		mvi	a,000H
+0504 : 3E 00		"> "		mvi	a,000H
+0506 : 3E 00		"> "		mvi	a,000H
+0508 : 3E 00		"> "		mvi	a,000H
+050A : 3E 00		"> "		mvi	a,000H
+050C : 3E 00		"> "		mvi	a,000H
+050E : 3E 00		"> "		mvi	a,000H
+0510 : 3E 00		"> "		mvi	a,000H
+0512 : 3E 00		"> "		mvi	a,000H
+0514 : 3E 00		"> "		mvi	a,000H
+0516 : 3E 00		"> "		mvi	a,000H
+0518 : 3E 00		"> "		mvi	a,000H
+051A : 3E 00		"> "		mvi	a,000H
+051C : 3E 00		"> "		mvi	a,000H
+051E : 3E 00		"> "		mvi	a,000H
+0520 : 3E 00		"> "		mvi	a,000H
+0522 : 3E 00		"> "		mvi	a,000H
+0524 : 3E 00		"> "		mvi	a,000H
+0526 : 3E 00		"> "		mvi	a,000H
+0528 : 3E 00		"> "		mvi	a,000H
+052A : 3E 00		"> "		mvi	a,000H
+052C : 3E 00		"> "		mvi	a,000H
+052E : 3E 00		"> "		mvi	a,000H
+0530 : 3E 00		"> "		mvi	a,000H
+0532 : 3E 00		"> "		mvi	a,000H
+0534 : 3E 00		"> "		mvi	a,000H
+0536 : 3E 00		"> "		mvi	a,000H
+0538 : 3E 00		"> "		mvi	a,000H
+053A : 3E 00		"> "		mvi	a,000H
+053C : 3E 00		"> "		mvi	a,000H
+053E : 3E 00		"> "		mvi	a,000H
+0540 : 3E 00		"> "		mvi	a,000H
+0542 : 3E 00		"> "		mvi	a,000H
+0544 : 3E 00		"> "		mvi	a,000H
+0546 : 3E 00		"> "		mvi	a,000H
+0548 : 3E 00		"> "		mvi	a,000H
+054A : 3E 00		"> "		mvi	a,000H
+054C : 3E 00		"> "		mvi	a,000H
+054E : 3E 00		"> "		mvi	a,000H
+0550 : 36 00		"6 "		mvi	m,000H
+0552 : 3E 00		"> "		mvi	a,000H
+0554 : 3E 00		"> "		mvi	a,000H
+0556 : 3E 00		"> "		mvi	a,000H
+0558 : 36 00		"6 "		mvi	m,000H
+055A : 3E 00		"> "		mvi	a,000H
+055C : 3E 00		"> "		mvi	a,000H
+055E : 3E 00		"> "		mvi	a,000H
+0560 : 3E 00		"> "		mvi	a,000H
+0562 : 3E 00		"> "		mvi	a,000H
+0564 : 3E 00		"> "		mvi	a,000H
+0566 : 3E 00		"> "		mvi	a,000H
+0568 : 3E 00		"> "		mvi	a,000H
+056A : 3E 00		"> "		mvi	a,000H
+056C : 3E 00		"> "		mvi	a,000H
+056E : 3E 00		"> "		mvi	a,000H
+0570 : 3E 00		"> "		mvi	a,000H
+0572 : 3E 00		"> "		mvi	a,000H
+0574 : 3E 00		"> "		mvi	a,000H
+0576 : 3E 00		"> "		mvi	a,000H
+0578 : 3E 00		"> "		mvi	a,000H
+057A : 3E 00		"> "		mvi	a,000H
+057C : 3E 00		"> "		mvi	a,000H
+057E : 3E 00		"> "		mvi	a,000H
+0580 : 3E 00		"> "		mvi	a,000H
+0582 : 3E 00		"> "		mvi	a,000H
+0584 : 3E 00		"> "		mvi	a,000H
+0586 : 3E 00		"> "		mvi	a,000H
+0588 : 3E 00		"> "		mvi	a,000H
+058A : 3E 00		"> "		mvi	a,000H
+058C : 3E 00		"> "		mvi	a,000H
+058E : 3E 00		"> "		mvi	a,000H
+0590 : 3E 00		"> "		mvi	a,000H
+0592 : 3E 00		"> "		mvi	a,000H
+0594 : 3E 00		"> "		mvi	a,000H
+0596 : 3E 00		"> "		mvi	a,000H
+0598 : 3E 00		"> "		mvi	a,000H
+059A : 3E 00		"> "		mvi	a,000H
+059C : 3E 00		"> "		mvi	a,000H
+059E : 3E 00		"> "		mvi	a,000H
+05A0 : 3E 00		"> "		mvi	a,000H
+05A2 : 3E 00		"> "		mvi	a,000H
+05A4 : 3E 00		"> "		mvi	a,000H
+05A6 : 3E 00		"> "		mvi	a,000H
+05A8 : 3E 00		"> "		mvi	a,000H
+05AA : 3E 00		"> "		mvi	a,000H
+05AC : 36 00		"6 "		mvi	m,000H
+05AE : 3E 00		"> "		mvi	a,000H
+05B0 : 3E 00		"> "		mvi	a,000H
+05B2 : 3E 00		"> "		mvi	a,000H
+05B4 : 3E 00		"> "		mvi	a,000H
+05B6 : 3E 00		"> "		mvi	a,000H
+05B8 : 36 00		"6 "		mvi	m,000H
+05BA : 3E 00		"> "		mvi	a,000H
+05BC : 3E 00		"> "		mvi	a,000H
+05BE : 36 00		"6 "		mvi	m,000H
+05C0 : 3E 00		"> "		mvi	a,000H
+05C2 : 3E 00		"> "		mvi	a,000H
+05C4 : 3E 00		"> "		mvi	a,000H
+05C6 : 3E 00		"> "		mvi	a,000H
+05C8 : 3E 00		"> "		mvi	a,000H
+05CA : 3E 00		"> "		mvi	a,000H
+05CC : 3E 00		"> "		mvi	a,000H
+05CE : 3E 00		"> "		mvi	a,000H
+05D0 : 36 00		"6 "		mvi	m,000H
+05D2 : 3E 00		"> "		mvi	a,000H
+05D4 : 36 00		"6 "		mvi	m,000H
+05D6 : 36 00		"6 "		mvi	m,000H
+05D8 : 36 00		"6 "		mvi	m,000H
+05DA : 3E 00		"> "		mvi	a,000H
+05DC : 3E 00		"> "		mvi	a,000H
+05DE : 36 00		"6 "		mvi	m,000H
+05E0 : 34		"4"		inr	m
+05E1 : 00		" "		nop
+05E2 : 3E 00		"> "		mvi	a,000H
+05E4 : 3E 00		"> "		mvi	a,000H
+05E6 : 3E 00		"> "		mvi	a,000H
+05E8 : 36 00		"6 "		mvi	m,000H
+05EA : 3E 00		"> "		mvi	a,000H
+05EC : 3E 00		"> "		mvi	a,000H
+05EE : 36 00		"6 "		mvi	m,000H
+05F0 : 34		"4"		inr	m
+05F1 : 00		" "		nop
+05F2 : 34		"4"		inr	m
+05F3 : 00		" "		nop
+05F4 : 34		"4"		inr	m
+05F5 : 00		" "		nop
+05F6 : 3E 00		"> "		mvi	a,000H
+05F8 : 3E 00		"> "		mvi	a,000H
+05FA : 36 00		"6 "		mvi	m,000H
+05FC : 34		"4"		inr	m
+05FD : 00		" "		nop
+05FE : 3E 00		"> "		mvi	a,000H
+0600 : 3E 00		"> "		mvi	a,000H
+0602 : 3E 00		"> "		mvi	a,000H
+0604 : 3E 00		"> "		mvi	a,000H
+0606 : 36 00		"6 "		mvi	m,000H
+0608 : 36 00		"6 "		mvi	m,000H
+060A : 3E 00		"> "		mvi	a,000H
+060C : 3E 00		"> "		mvi	a,000H
+060E : 36 00		"6 "		mvi	m,000H
+0610 : 3E 00		"> "		mvi	a,000H
+0612 : 36 00		"6 "		mvi	m,000H
+0614 : 34		"4"		inr	m
+0615 : 00		" "		nop
+0616 : 3E 00		"> "		mvi	a,000H
+0618 : 36 00		"6 "		mvi	m,000H
+061A : 3E 00		"> "		mvi	a,000H
+061C : 36 00		"6 "		mvi	m,000H
+061E : 36 00		"6 "		mvi	m,000H
+0620 : 3E 00		"> "		mvi	a,000H
+0622 : 3E 00		"> "		mvi	a,000H
+0624 : 3C		"<"		inr	a
+0625 : 00		" "		nop
+0626 : 3E 00		"> "		mvi	a,000H
+0628 : 36 00		"6 "		mvi	m,000H
+062A : 3E 00		"> "		mvi	a,000H
+062C : 3E 00		"> "		mvi	a,000H
+062E : 3E 00		"> "		mvi	a,000H
+0630 : 3E 00		"> "		mvi	a,000H
+0632 : 3E 00		"> "		mvi	a,000H
+0634 : 3E 00		"> "		mvi	a,000H
+0636 : 3E 00		"> "		mvi	a,000H
+0638 : 3E 00		"> "		mvi	a,000H
+063A : 36 00		"6 "		mvi	m,000H
+063C : 36 00		"6 "		mvi	m,000H
+063E : 34		"4"		inr	m
+063F : 00		" "		nop
+0640 : 3E 00		"> "		mvi	a,000H
+0642 : 3E 00		"> "		mvi	a,000H
+0644 : 3C		"<"		inr	a
+0645 : 00		" "		nop
+0646 : 3E 00		"> "		mvi	a,000H
+0648 : 3E 00		"> "		mvi	a,000H
+064A : 3E 00		"> "		mvi	a,000H
+064C : 3E 00		"> "		mvi	a,000H
+064E : 3E 00		"> "		mvi	a,000H
+0650 : 34		"4"		inr	m
+0651 : 00		" "		nop
+0652 : 3E 00		"> "		mvi	a,000H
+0654 : 3E 00		"> "		mvi	a,000H
+0656 : 34		"4"		inr	m
+0657 : 00		" "		nop
+0658 : 36 00		"6 "		mvi	m,000H
+065A : 3E 00		"> "		mvi	a,000H
+065C : 3E 00		"> "		mvi	a,000H
+065E : 36 00		"6 "		mvi	m,000H
+0660 : 36 00		"6 "		mvi	m,000H
+0662 : 3E 00		"> "		mvi	a,000H
+0664 : 3E 00		"> "		mvi	a,000H
+0666 : 3E 00		"> "		mvi	a,000H
+0668 : 34		"4"		inr	m
+0669 : 00		" "		nop
+066A : 3E 00		"> "		mvi	a,000H
+066C : 3E 00		"> "		mvi	a,000H
+066E : 3E 00		"> "		mvi	a,000H
+0670 : 3E 00		"> "		mvi	a,000H
+0672 : 3E 00		"> "		mvi	a,000H
+0674 : 36 00		"6 "		mvi	m,000H
+0676 : 3E 00		"> "		mvi	a,000H
+0678 : 3E 00		"> "		mvi	a,000H
+067A : 3E 00		"> "		mvi	a,000H
+067C : 3C		"<"		inr	a
+067D : 00		" "		nop
+067E : 3E 00		"> "		mvi	a,000H
+0680 : 36 00		"6 "		mvi	m,000H
+0682 : 3E 00		"> "		mvi	a,000H
+0684 : 3E 00		"> "		mvi	a,000H
+0686 : 36 00		"6 "		mvi	m,000H
+0688 : 36 00		"6 "		mvi	m,000H
+068A : 3E 00		"> "		mvi	a,000H
+068C : 3E 00		"> "		mvi	a,000H
+068E : 36 00		"6 "		mvi	m,000H
+0690 : 3E 00		"> "		mvi	a,000H
+0692 : 3E 00		"> "		mvi	a,000H
+0694 : 36 00		"6 "		mvi	m,000H
+0696 : 3E 00		"> "		mvi	a,000H
+0698 : 36 00		"6 "		mvi	m,000H
+069A : 3E 00		"> "		mvi	a,000H
+069C : 3E 00		"> "		mvi	a,000H
+069E : 36 00		"6 "		mvi	m,000H
+06A0 : 3E 00		"> "		mvi	a,000H
+06A2 : 3C		"<"		inr	a
+06A3 : 00		" "		nop
+06A4 : 3C		"<"		inr	a
+06A5 : 00		" "		nop
+06A6 : 36 00		"6 "		mvi	m,000H
+06A8 : 36 00		"6 "		mvi	m,000H
+06AA : 3E 00		"> "		mvi	a,000H
+06AC : 3C		"<"		inr	a
+06AD : 00		" "		nop
+06AE : 3E 00		"> "		mvi	a,000H
+06B0 : 34		"4"		inr	m
+06B1 : 00		" "		nop
+06B2 : 3E 00		"> "		mvi	a,000H
+06B4 : 3E 00		"> "		mvi	a,000H
+06B6 : 3C		"<"		inr	a
+06B7 : 00		" "		nop
+06B8 : 34		"4"		inr	m
+06B9 : 00		" "		nop
+06BA : 3C		"<"		inr	a
+06BB : 00		" "		nop
+06BC : 3E 00		"> "		mvi	a,000H
+06BE : 36 00		"6 "		mvi	m,000H
+06C0 : 3E 00		"> "		mvi	a,000H
+06C2 : 3C		"<"		inr	a
+06C3 : 00		" "		nop
+06C4 : 34		"4"		inr	m
+06C5 : 00		" "		nop
+06C6 : 3E 00		"> "		mvi	a,000H
+06C8 : 3E 00		"> "		mvi	a,000H
+06CA : 3E 00		"> "		mvi	a,000H
+06CC : 3E 00		"> "		mvi	a,000H
+06CE : 3E 00		"> "		mvi	a,000H
+06D0 : 3E 00		"> "		mvi	a,000H
+06D2 : 3E 00		"> "		mvi	a,000H
+06D4 : 3E 00		"> "		mvi	a,000H
+06D6 : 3C		"<"		inr	a
+06D7 : 00		" "		nop
+06D8 : 3C		"<"		inr	a
+06D9 : 00		" "		nop
+06DA : 3E 00		"> "		mvi	a,000H
+06DC : 3E 00		"> "		mvi	a,000H
+06DE : 3E 00		"> "		mvi	a,000H
+06E0 : 34		"4"		inr	m
+06E1 : 00		" "		nop
+06E2 : 3E 00		"> "		mvi	a,000H
+06E4 : 3E 00		"> "		mvi	a,000H
+06E6 : 36 00		"6 "		mvi	m,000H
+06E8 : 36 00		"6 "		mvi	m,000H
+06EA : 36 00		"6 "		mvi	m,000H
+06EC : 3E 00		"> "		mvi	a,000H
+06EE : 34		"4"		inr	m
+06EF : 00		" "		nop
+06F0 : 3E 00		"> "		mvi	a,000H
+06F2 : 3E 00		"> "		mvi	a,000H
+06F4 : 34		"4"		inr	m
+06F5 : 00		" "		nop
+06F6 : 3E 00		"> "		mvi	a,000H
+06F8 : 3E 00		"> "		mvi	a,000H
+06FA : 3C		"<"		inr	a
+06FB : 00		" "		nop
+06FC : 3E 00		"> "		mvi	a,000H
+06FE : 36 00		"6 "		mvi	m,000H
+0700 : 01 0B 1B		"   "		lxi	b,01B0BH
+0703 : 1B		" "		dcx	d
+0704 : 0B		" "		dcx	b
+0705 : 03		" "		inx	b
+0706 : 19		" "		dad	d
+0707 : 11 36 00		" 6 "		lxi	d,00036H
+070A : 3E 00		"> "		mvi	a,000H
+070C : 3E 00		"> "		mvi	a,000H
+070E : 34		"4"		inr	m
+070F : 00		" "		nop
+0710 : 3C		"<"		inr	a
+0711 : 00		" "		nop
+0712 : 3E 00		"> "		mvi	a,000H
+0714 : 3C		"<"		inr	a
+0715 : 00		" "		nop
+0716 : 3E 00		"> "		mvi	a,000H
+0718 : 3C		"<"		inr	a
+0719 : 00		" "		nop
+071A : 3C		"<"		inr	a
+071B : 00		" "		nop
+071C : 3E 00		"> "		mvi	a,000H
+071E : 3E 00		"> "		mvi	a,000H
+0720 : 3C		"<"		inr	a
+0721 : 00		" "		nop
+0722 : 3E 00		"> "		mvi	a,000H
+0724 : 3C		"<"		inr	a
+0725 : 00		" "		nop
+0726 : 3E 00		"> "		mvi	a,000H
+0728 : 3E 00		"> "		mvi	a,000H
+072A : 3C		"<"		inr	a
+072B : 00		" "		nop
+072C : 3E 00		"> "		mvi	a,000H
+072E : 3E 00		"> "		mvi	a,000H
+0730 : 3E 00		"> "		mvi	a,000H
+0732 : 3E 00		"> "		mvi	a,000H
+0734 : 3C		"<"		inr	a
+0735 : 00		" "		nop
+0736 : 3E 00		"> "		mvi	a,000H
+0738 : 3E 00		"> "		mvi	a,000H
+073A : 3E 00		"> "		mvi	a,000H
+073C : 3E 00		"> "		mvi	a,000H
+073E : 36 00		"6 "		mvi	m,000H
+0740 : 3E 00		"> "		mvi	a,000H
+0742 : 3C		"<"		inr	a
+0743 : 00		" "		nop
+0744 : 3C		"<"		inr	a
+0745 : 00		" "		nop
+0746 : 3E 00		"> "		mvi	a,000H
+0748 : 3E 00		"> "		mvi	a,000H
+074A : 3E 00		"> "		mvi	a,000H
+074C : 3C		"<"		inr	a
+074D : 00		" "		nop
+074E : 3E 00		"> "		mvi	a,000H
+0750 : 36 00		"6 "		mvi	m,000H
+0752 : 3E 00		"> "		mvi	a,000H
+0754 : 3E 00		"> "		mvi	a,000H
+0756 : 3E 00		"> "		mvi	a,000H
+0758 : 3E 00		"> "		mvi	a,000H
+075A : 3E 00		"> "		mvi	a,000H
+075C : 3E 00		"> "		mvi	a,000H
+075E : 3E 00		"> "		mvi	a,000H
+0760 : 3E 00		"> "		mvi	a,000H
+0762 : 3E 00		"> "		mvi	a,000H
+0764 : 3C		"<"		inr	a
+0765 : 00		" "		nop
+0766 : 3E 00		"> "		mvi	a,000H
+0768 : 3E 00		"> "		mvi	a,000H
+076A : 3E 00		"> "		mvi	a,000H
+076C : 3E 00		"> "		mvi	a,000H
+076E : 36 00		"6 "		mvi	m,000H
+0770 : 3E 00		"> "		mvi	a,000H
+0772 : 3E 00		"> "		mvi	a,000H
+0774 : 3C		"<"		inr	a
+0775 : 00		" "		nop
+0776 : 3E 00		"> "		mvi	a,000H
+0778 : 3E 00		"> "		mvi	a,000H
+077A : 3C		"<"		inr	a
+077B : 00		" "		nop
+077C : 3E 00		"> "		mvi	a,000H
+077E : 3E 00		"> "		mvi	a,000H
+0780 : 36 00		"6 "		mvi	m,000H
+0782 : 3E 00		"> "		mvi	a,000H
+0784 : 3E 00		"> "		mvi	a,000H
+0786 : 3E 00		"> "		mvi	a,000H
+0788 : 3E 00		"> "		mvi	a,000H
+078A : 3E 00		"> "		mvi	a,000H
+078C : 3E 00		"> "		mvi	a,000H
+078E : 3E 00		"> "		mvi	a,000H
+0790 : 3C		"<"		inr	a
+0791 : 00		" "		nop
+0792 : 3E 00		"> "		mvi	a,000H
+0794 : 36 00		"6 "		mvi	m,000H
+0796 : 3E 00		"> "		mvi	a,000H
+0798 : 3E 00		"> "		mvi	a,000H
+079A : 3C		"<"		inr	a
+079B : 00		" "		nop
+079C : 3E 00		"> "		mvi	a,000H
+079E : 3E 00		"> "		mvi	a,000H
+07A0 : 3E 00		"> "		mvi	a,000H
+07A2 : 3E 00		"> "		mvi	a,000H
+07A4 : 3C		"<"		inr	a
+07A5 : 00		" "		nop
+07A6 : 3E 00		"> "		mvi	a,000H
+07A8 : 36 00		"6 "		mvi	m,000H
+07AA : 3E 00		"> "		mvi	a,000H
+07AC : 3E 00		"> "		mvi	a,000H
+07AE : 3E 00		"> "		mvi	a,000H
+07B0 : 3E 00		"> "		mvi	a,000H
+07B2 : 3E 00		"> "		mvi	a,000H
+07B4 : 3E 00		"> "		mvi	a,000H
+07B6 : 3E 00		"> "		mvi	a,000H
+07B8 : 3E 00		"> "		mvi	a,000H
+07BA : 3E 00		"> "		mvi	a,000H
+07BC : 3E 00		"> "		mvi	a,000H
+07BE : 36 00		"6 "		mvi	m,000H
+07C0 : 3E 00		"> "		mvi	a,000H
+07C2 : 3E 00		"> "		mvi	a,000H
+07C4 : 3C		"<"		inr	a
+07C5 : 00		" "		nop
+07C6 : 3E 00		"> "		mvi	a,000H
+07C8 : 3E 00		"> "		mvi	a,000H
+07CA : 3E 00		"> "		mvi	a,000H
+07CC : 3E 00		"> "		mvi	a,000H
+07CE : 3E 00		"> "		mvi	a,000H
+07D0 : 3E 00		"> "		mvi	a,000H
+07D2 : 3E 00		"> "		mvi	a,000H
+07D4 : 3E 00		"> "		mvi	a,000H
+07D6 : 3E 00		"> "		mvi	a,000H
+07D8 : 3E 00		"> "		mvi	a,000H
+07DA : 3E 00		"> "		mvi	a,000H
+07DC : 3E 00		"> "		mvi	a,000H
+07DE : 3E 00		"> "		mvi	a,000H
+07E0 : 3E 00		"> "		mvi	a,000H
+07E2 : 3E 00		"> "		mvi	a,000H
+07E4 : 3E 00		"> "		mvi	a,000H
+07E6 : 3E 00		"> "		mvi	a,000H
+07E8 : 3E 00		"> "		mvi	a,000H
+07EA : 3E 00		"> "		mvi	a,000H
+07EC : 3E 00		"> "		mvi	a,000H
+07EE : 3E 00		"> "		mvi	a,000H
+07F0 : 3E 00		"> "		mvi	a,000H
+07F2 : 3C		"<"		inr	a
+07F3 : 00		" "		nop
+07F4 : 34		"4"		inr	m
+07F5 : 00		" "		nop
+07F6 : 3E 00		"> "		mvi	a,000H
+07F8 : 3E 00		"> "		mvi	a,000H
+07FA : 3E 00		"> "		mvi	a,000H
+07FC : 36 00		"6 "		mvi	m,000H
+07FE : 3E 00		"> "		mvi	a,000H
+
+;--------------------------------------------------------------
+Symbol table
+============
+
+Value		Type	Name
+-----		----	----
+003F		Code	L003F
+004B		Code	L004B
+0066		Code	L0066
+006B		Code	L006B
+0082		Code	L0082
+0099		Code	L0099
+00AD		Code	L00AD
+00D9		Code	L00D9
+00E1		Code	L00E1
+00E7		Code	L00E7
+0107		Code	L0107
+011B		Code	L011B
+013C		Code	L013C
+0141		Code	L0141
+0143		Code	L0143
+0167		Code	L0167
+0168		Code	L0168
+018D		Code	L018D
+0194		Code	L0194
+0198		Code	L0198
+019F		Code	L019F
+01A6		Code	L01A6
+01D4		Code	L01D4
+01D8		Code	L01D8
+01DB		Code	L01DB
+01E7		Code	L01E7
+01F8		Code	L01F8
+0201		Code	L0201
+0204		Code	L0204
+0206		Code	L0206
+020C		Code	L020C
+0218		Code	L0218
+021E		Code	L021E
+0230		Code	L0230
+024B		Code	L024B
+026A		Code	L026A
+0270		Code	L0270
+027C		Code	L027C
+028B		Code	L028B
+028D		Code	L028D
+02D3		Code	L02D3
+02E4		Code	L02E4
+02F6		Code	L02F6
+030F		Code	L030F
+0310		Code	L0310
+8300		Data	X8300
+8301		Data	X8301
+8302		Data	X8302
+8303		Data	X8303
+8304		Data	X8304
+8305		Data	X8305
+8306		Data	X8306
+8307		Data	X8307
+8308		Data	X8308
+8309		Data	X8309
+830A		Data	X830A
+830B		Data	X830B
+830C		Data	X830C
+8314		Data	X8314
+8315		Data	X8315
+8316		Data	X8316
+8317		Data	X8317
+8318		Data	X8318
+8319		Data	X8319
+831B		Data	X831B
+831C		Data	X831C
+831D		Data	X831D
+831E		Data	X831E
+
+Number of symbols:			68
+
+;--------------------------------------------------------------
